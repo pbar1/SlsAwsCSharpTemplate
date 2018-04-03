@@ -1,0 +1,17 @@
+service: AwsSlsCSharpTemplate
+
+provider:
+  name: aws
+  runtime: dotnetcore2.0
+  region: us-east-1
+
+plugins:
+  - serverless-dotnet
+
+package:
+  exclude:
+    - .vs/**
+
+functions:
+  hello:
+    handler: AwsSlsCSharpTemplate::AwsSlsCSharpTemplate.Handler::Hello
